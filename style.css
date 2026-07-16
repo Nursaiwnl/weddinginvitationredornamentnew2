@@ -1,0 +1,625 @@
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed; /* Железобетонно блокирует прокрутку на смартфонах */
+    width: 100%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+/* ==========================================================
+   1. ПОДКЛЮЧЕНИЕ ШРИФТОВ (Файлы должны лежать рядом с style.css)
+   ========================================================== */
+@font-face {
+    font-family: 'Angelica';
+    src: url('Angelica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AnastasiaPerfect';
+    src: url(data:font/woff2;charset=utf-8;base64,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вных... Роскошно выглядит. Буквы очень элегантно сливаются в единую подпись, никаких разрывов! */
+}
+
+@font-face {
+    font-family: 'NewCenturySchoolBook';
+    src: url('NewCenturySchoolBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'BetterSaturday';
+    src: url('BetterSaturday.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'apple-chancery';
+    src: url('apple-chancery.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Переменные цветовой гаммы — ИЗМЕНЕНЫ ПОД КРАСНУЮ ПАЛИТРУ */
+:root {
+    --bg-light: #FFFDFD;
+    --bg-card: #FFFFFF;
+    --accent-pink: #F5C6C8;        /* Мягкий красновато-розовый для тонких рамок */
+    --accent-pink-dark: #C62828;   /* Насыщенный красный из изображения */
+    --accent-gold: #D4AF37;
+    --text-dark: #3E2723;          /* Темно-коричневый с теплым подтоном */
+    --text-muted: #8D6E63;         /* Приглушенный теплый тон */
+    --shadow-soft: 0 10px 30px rgba(198, 40, 40, 0.08);
+    --shadow-deep: 0 15px 40px rgba(62, 39, 35, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Принудительно задаем базовый шрифт для всего сайта */
+body, input, select, textarea, button {
+    font-family: 'NewCenturySchoolBook', 'Playfair Display', serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.8;
+    text-align: center;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0 20px 20px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* ==========================================================
+   2. НАСТРОЙКА РАЗМЕРОВ И РАСПОЛОЖЕНИЯ ЦВЕТОВ (f1 и f1r)
+   ========================================================== */
+   .block-with-flowers {
+       position: relative;
+       box-sizing: border-box;
+   }
+
+   .inline-flower {
+       position: absolute;
+       object-fit: contain;
+       pointer-events: none;
+
+       /* СЛОЙ: z-index: 1 ставит цветы на самый нижний слой внутри блока,
+          чтобы они гарантированно уходили НАЗАД под текст */
+       z-index: 1;
+
+       opacity: 0;
+       transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.4s ease;
+   }
+
+   /* --- [НАСТРОЙКА РАЗМЕРОВ] --- */
+   /* ПК Версия */
+   .flower-left, .flower-right {
+       width: 160px;   /* Размер цветков на компьютерах */
+       height: 160px;
+   }
+   /* Мобильная Версия */
+   @media (max-width: 480px) {
+       .flower-left, .flower-right {
+           width: 160px;  /* Размер цветков на телефонах */
+           height: 370px;
+       }
+   }
+
+   /* --- [НАСТРОЙКА НАЧАЛЬНЫХ ТРАНСФОРМАЦИЙ И СДВИГОВ] --- */
+   .flower-left {
+       left: -50px;
+       transform: translate(-30px, 0) scale(0.6) rotate(-20deg);
+   }
+   .flower-right {
+       right: -50px;
+       transform: translate(30px, 0) scale(0.6) rotate(20deg);
+   }
+
+   /* --- [ПРОЗРАЧНОСТЬ ПРИ СКРОЛЛЕ] --- */
+   .reveal.active .inline-flower {
+       /* НАСТРОЙКА ПРОЗРАЧНОСТИ:
+          0.0 - полностью невидимый, 1.0 - полностью плотный. */
+       opacity: 0.55;
+
+       transform: translate(0, 0) scale(1) rotate(0deg);
+   }
+
+   /* --- [КООРДИНАТЫ ПО ВЫСОТЕ ДЛЯ КАЖДОГО БЛОКА] --- */
+   .flower-pos-1 { top: -6px; }
+   .flower-pos-2 { top: 56%; }
+   .flower-pos-3 { top: -13%; }
+   .flower-pos-4 { top: -30%; }
+   .flower-pos-5.flower-left { top: 20px; }
+   .flower-pos-5.flower-right { bottom: -20px; }
+   .flower-pos-6 { top: -80px; }
+
+/* ==========================================================
+   3. ИСПРАВЛЕННАЯ СЕКЦИЯ ВЕРХНЕГО ФОТО (НЕ РЕЖЕТСЯ)
+   ========================================================== */
+.hero {
+    position: relative;
+    width: 100%;         /* Занимает всю ширину контейнера без вылетов */
+    height: 660px;        /* Высота подстроится под контент автоматически */
+    min-height: 480px;   /* Чтобы фотка выглядела крупно и красиво */
+    border-radius: 20px; /* Делает аккуратное скругление краев фото */
+    overflow: hidden;
+    background-color: var(--bg-light);
+    margin-top: 0px;
+}
+
+.hero-img-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Фото НЕ кадрируется и НЕ обрезается */
+    display: block;
+}
+
+/* Мягкое размытие/переход внизу фотографии */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(to top, var(--bg-light) 5%, rgba(255, 253, 253, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   ОСТАЛЬНЫЕ СТИЛИ (Конверт, Кнопки, Таймер, Элементы)
+   ========================================================== */
+#start-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #FFFDFD 0%, #FFF3F3 100%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 1.2s cubic-bezier(0.82, 0.01, 0.25, 1), visibility 1.2s;
+    overflow: hidden;
+}
+
+.envelope-container {
+    perspective: 1000px;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FCF5F5;
+    border-radius: 6px;
+    border: 1px solid var(--accent-pink);
+    box-shadow: var(--shadow-deep);
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 110px solid var(--accent-pink-dark);
+    transform-origin: top;
+    transition: transform 0.6s ease-in-out;
+    z-index: 4;
+}
+
+.envelope-paper {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    width: 270px;
+    height: 150px;
+    background: #ffffff;
+    border-radius: 4px;
+    border: 1px solid rgba(198, 40, 40, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.6s ease-in-out;
+}
+
+.envelope-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-pink-dark);
+    letter-spacing: 4px;
+}
+
+.wax-seal {
+    position: absolute;
+    top: 95px;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #E1B25C 0%, #B8860B 100%);
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(184, 134, 11, 0.4), inset 0 2px 4px rgba(255,255,255,0.4);
+    z-index: 5;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    border: 2px solid #D4AF37;
+}
+
+#start-overlay.open-envelope .envelope-flap { transform: rotateX(180deg); z-index: 1; }
+#start-overlay.open-envelope .envelope-paper { transform: translateY(-70px); z-index: 3; }
+#start-overlay.open-envelope .wax-seal { transform: scale(0) rotate(180deg); opacity: 0; }
+#start-overlay.disappeared { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.loader-flower-real {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    pointer-events: none;
+    transition: transform 2.2s cubic-bezier(0.1, 1, 0.1, 1), opacity 1.4s;
+    z-index: 10;
+}
+.lf-1 { top: 40%; left: 15%; } .lf-2 { top: 30%; left: 22%; } .lf-3 { top: 52%; left: 18%; } .lf-4 { top: 62%; left: 26%; } .lf-5 { top: 45%; left: 28%; }
+.lf-6 { top: 40%; right: 15%; } .lf-7 { top: 30%; right: 22%; } .lf-8 { top: 52%; right: 18%; } .lf-9 { top: 62%; right: 26%; } .lf-10 { top: 45%; right: 28%; }
+
+#start-overlay.disappeared .lf-1 { transform: translate(-400px, -350px) rotate(-140deg) scale(1.8); opacity: 0; }
+#start-overlay.disappeared .lf-2 { transform: translate(-300px, -450px) rotate(160deg) scale(1.7); opacity: 0; }
+#start-overlay.disappeared .lf-3 { transform: translate(-450px, 150px) rotate(-110deg) scale(1.9); opacity: 0; }
+#start-overlay.disappeared .lf-4 { transform: translate(-250px, 400px) rotate(180deg) scale(1.6); opacity: 0; }
+#start-overlay.disappeared .lf-5 { transform: translate(-350px, -100px) rotate(-90deg) scale(1.7); opacity: 0; }
+#start-overlay.disappeared .lf-6 { transform: translate(400px, -350px) rotate(140deg) scale(1.8); opacity: 0; }
+#start-overlay.disappeared .lf-7 { transform: translate(300px, -450px) rotate(-160deg) scale(1.7); opacity: 0; }
+#start-overlay.disappeared .lf-8 { transform: translate(450px, 150px) rotate(110deg) scale(1.9); opacity: 0; }
+#start-overlay.disappeared .lf-9 { transform: translate(250px, 400px) rotate(-180deg) scale(1.6); opacity: 0; }
+#start-overlay.disappeared .lf-10 { transform: translate(350px, -100px) rotate(90deg) scale(1.7); opacity: 0; }
+
+.start-btn {
+    z-index: 100;
+    background: #ffffff;
+    border: 1px solid var(--accent-pink-dark);
+    color: var(--accent-pink-dark);
+    padding: 14px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.15);
+    transition: all 0.4s ease;
+}
+.start-btn:hover { background: var(--accent-pink-dark); color: #ffffff; }
+
+.reveal {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(25px);
+    transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.reveal.active { opacity: 1; filter: blur(0); transform: translateY(0); }
+
+.hero-content { position: relative; z-index: 10; margin-top: -20px; padding: 0 24px 20px; }
+.title-wrapper { display: flex; flex-direction: column; width: 100%; }
+.main-title {
+    /* Роскошный строгий шрифт с засечками (как в журналах Vogue/Harper's Bazaar) */
+    font-family: 'Times New Roman', 'Playfair Display', Georgia, serif !important;
+    font-size: 4.5rem;
+    font-weight: 300;
+    text-transform: uppercase; /* Все буквы заглавные */
+    letter-spacing: 8px; /* Красивый дорогой интервал между буквами */
+    color: var(--accent-pink-dark);
+    line-height: 1.2;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.sub-title-handwritten {
+    /* Чистый, аккуратный современный шрифт */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: 1.2rem; /* Делаем его аккуратным саб-тайтлом снизу */
+    font-weight: 400;
+    text-transform: uppercase; /* Тоже заглавными для баланса */
+    letter-spacing: 12px; /* Очень широкий благородный интервал */
+    color: var(--accent-pink-dark);
+    opacity: 0.8; /* Чуть приглушаем, чтобы акцент был на имени */
+    align-self: center;
+    margin-top: 10px;
+    margin-right: 0;
+    transform: none; /* Убираем наклон, пишем строго и ровно */
+    white-space: nowrap;
+    text-align: center;
+}
+.animated-title { opacity: 0; transform: scale(0.95) translateY(15px); animation: pptScaleUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 1s; }
+@keyframes pptScaleUp { to { opacity: 1; transform: scale(1) translateY(0); } }
+
+.ppt-slide-up { display: inline-block; opacity: 0; transform: translateY(20px); transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal.active .ppt-slide-up { opacity: 1; transform: translateY(0); }
+
+.invitation { padding: 40px 15px; background-color: var(--bg-light); }
+.invitation-wrap { z-index: 10; position: relative; max-width: 320px; margin: 0 auto; }
+.invite-header, .invite-sub, .invite-body { font-size: 1.3rem; color: #9C8C7D !important; margin-bottom: 20px; }
+
+/* Каллиграфические заголовки Angelica */
+.bride-calligraphy-name {
+    font-family: 'Angelica', cursive, serif;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 8rem;
+    line-height: 0.9;
+    margin: 10px auto 25px;
+    display: inline-block;
+    color: #9C8C7D !important;
+    text-shadow: 0 1px 4px rgba(156, 140, 125, 0.15);
+}
+.bride-calligraphy-nameee {
+    font-family: 'Angelica', cursive, serif;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 8rem;
+    line-height: 0.9;
+    margin: 10px auto 25px;
+    display: inline-block;
+    color: var(--accent-pink-dark);
+    text-shadow: 0 1px 4px rgba(156, 140, 125, 0.15);
+}
+.gallery-title {
+    font-family: 'Angelica', cursive, serif;
+    font-weight: normal;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 3.5rem;
+    color: #9C8C7D !important;
+    text-shadow: 0 1px 4px rgba(156, 140, 125, 0.15);
+}
+.details-title {
+    font-family: 'Times New Roman', 'Playfair Display', Georgia, serif !important;
+    font-weight: normal;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 1rem;
+    color: #9C8C7D !important;
+    text-shadow: 0 1px 4px rgba(156, 140, 125, 0.15);
+}
+
+.wedding-details-text { font-weight: 500; font-size: 1.2rem; margin-top: 3px; color: var(--accent-pink-dark); }
+.wedding-venue-text { font-weight: 500; font-size: 1.2rem; margin-top: 3px; color: #9C8C7D; text-shadow: 0 1px 4px rgba(156, 140, 125, 0.15); }
+
+@media (max-width: 480px) {
+    .bride-calligraphy-name { font-size: 4.5rem; }
+    .invite-header, .invite-body { font-size: 1.15rem; }
+     .gallery-title { font-size: 2.8rem; }
+     .details-title{font-size: 1.6rem}
+}
+
+.parents-section { margin-top: 20px; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(198, 40, 40, 0.15); }
+.parents-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2.5px; color: var(--text-muted); margin-bottom: 6px; }
+.parents-names { color: var(--accent-pink-dark); font-size: 1.4rem; }
+
+.calendar-card, .rsvp-form, .details-card { position: relative; background: transparent !important; border: none !important; box-shadow: none !important; padding: 15px 5px !important; margin: 20px 0 !important; }
+.calendar-month { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 5px; color: var(--accent-pink-dark); margin-bottom: 20px; }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px 4px; font-size: 0.85rem; color: var(--text-dark); }
+.calendar-header { color: var(--text-muted); font-weight: 600; font-size: 0.75rem; letter-spacing: 1.5px; }
+.calendar-day { display: flex; align-items: center; justify-content: center; height: 30px; position: relative; }
+.calendar-day.target { color: #ffffff; font-weight: bold; z-index: 2; }
+.calendar-day .day-num { position: relative; z-index: 3; }
+
+.beating-heart {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: var(--accent-pink-dark);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    animation: heartBeat 1.4s infinite;
+    box-shadow: 0 4px 8px rgba(198, 40, 40, 0.4);
+}
+.beating-heart:before, .beating-heart:after { content: ""; position: absolute; width: 28px; height: 28px; background-color: var(--accent-pink-dark); border-radius: 50%; }
+.beating-heart:before { top: -14px; left: 0; }
+.beating-heart:after { left: 14px; top: 0; }
+
+@keyframes heartBeat {
+    0% { transform: translate(-50%, -50%) scale(0.85) rotate(-45deg); }
+    30% { transform: translate(-50%, -50%) scale(1.05) rotate(-45deg); }
+    45% { transform: translate(-50%, -50%) scale(0.95) rotate(-45deg); }
+    60% { transform: translate(-50%, -50%) scale(1.1) rotate(-45deg); }
+    100% { transform: translate(-50%, -50%) scale(0.85) rotate(-45deg); }
+}
+
+.calendar-time { font-style: italic; font-size: 1.2rem; color: var(--accent-pink-dark); margin-top: 20px; border-top: 1px solid rgba(198, 40, 40, 0.15); padding-top: 10px; display: inline-block; width: 80%; }
+
+/* ==========================================================
+   ОБНОВЛЕННЫЙ МУЗЫКАЛЬНЫЙ ПЛЕЕР (Круглый, красный, белые иконки)
+   ========================================================== */
+   .music-player {
+       position: fixed;
+       bottom: 25px;
+       right: 25px;
+       z-index: 1000;
+   }
+
+   .music-btn {
+       background-color: var(--accent-pink-dark);
+       border: none;
+       outline: none; /* Убирает любые левые полосы и контуры браузера */
+       box-shadow: none;
+
+       border-radius: 50%; /* Идеальный круг */
+       width: 46px;
+       height: 46px;
+
+       cursor: pointer;
+       position: relative; /* Чтобы центрировать иконки внутри */
+
+       /* Тень кнопки подстроена под красный цвет */
+       filter: drop-shadow(0 4px 12px rgba(198, 40, 40, 0.4));
+
+       transition: transform 0.3s ease;
+       -webkit-tap-highlight-color: transparent; /* Убирает синий квадрат при клике на смартфонах */
+   }
+
+   /* Эффект пульсации, когда музыка играет */
+   .music-btn.playing {
+       animation: musicPulse 2.5s infinite;
+   }
+
+   @keyframes musicPulse {
+       0% { transform: scale(1); filter: drop-shadow(0 4px 12px rgba(198, 40, 40, 0.4)); }
+       50% { transform: scale(1.06); filter: drop-shadow(0 6px 18px rgba(198, 40, 40, 0.6)); }
+       100% { transform: scale(1); filter: drop-shadow(0 4px 12px rgba(198, 40, 40, 0.4)); }
+   }
+
+   .music-btn:active {
+       transform: scale(0.95);
+   }
+
+   /* --- РИСУЕМ ИКОНКУ PLAY (ТРЕУГОЛЬНИК) ЧЕРЕЗ CSS --- */
+   .music-btn::before {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 53%; /* Чуть смещаем вправо для идеального оптического центра треугольника */
+       transform: translate(-50%, -50%);
+
+       /* Геометрия треугольника */
+       width: 0;
+       height: 0;
+       border-top: 7px solid transparent;
+       border-bottom: 7px solid transparent;
+       border-left: 12px solid #FFFFFF; /* Чисто белый цвет */
+
+       transition: opacity 0.2s ease;
+       opacity: 1;
+   }
+
+   /* --- РИСУЕМ ИКОНКУ PAUSE (ДВЕ ПОЛОСКИ) ЧЕРЕЗ CSS --- */
+   .music-btn::after {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+
+       /* Геометрия двух белых полосок */
+       width: 10px;
+       height: 14px;
+       border-left: 3px solid #FFFFFF;
+       border-right: 3px solid #FFFFFF;
+
+       transition: opacity 0.2s ease;
+       opacity: 0; /* Изначально пауза скрыта */
+   }
+
+   /* --- ПЕРЕКЛЮЧЕНИЕ ИКОНОК ПРИ ИГРЕ --- */
+   /* Когда играет: скрываем треугольник, показываем паузу */
+   .music-btn.playing::before {
+       opacity: 0;
+   }
+   .music-btn.playing::after {
+       opacity: 1;
+   }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.08); box-shadow: 0 6px 20px rgba(198, 40, 40, 0.3); } 100% { transform: scale(1); } }
+
+/* Кнопки теперь имеют мягкий градиент с переходом в твой красный цвет */
+.btn { display: inline-block; background: linear-gradient(235deg, #FFEBEE 100%, #D32F2F 50%, #B71C1C 80%); color: var(--text-dark); padding: 12px 30px; text-decoration: bold; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-top: 20px; border: 1px solid rgba(198, 40, 40, 0.15); cursor: pointer; border-radius: 25px; box-shadow: 0 4px 12px rgba(198, 40, 40, 0.12); position: relative; overflow: hidden; transition: all 0.3s ease; }
+.btn-heartbeat { animation: buttonHeartbeat 2.4s infinite; }
+@keyframes buttonHeartbeat { 0% { transform: scale(1); } 14% { transform: scale(1.03); } 28% { transform: scale(1); } 42% { transform: scale(1.03); } 70% { transform: scale(1); } }
+.btn-heartbeat:hover { animation-play-state: paused; transform: scale(1.04) translateY(-1px); box-shadow: 0 6px 18px rgba(198, 40, 40, 0.2); }
+
+.btn-shimmer::after { content: ''; position: absolute; top: -50%; left: -60%; width: 30%; height: 200%; background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%); transform: rotate(30deg); animation: shineEffect 3.5s infinite ease-in-out; }
+@keyframes shineEffect { 0% { left: -60%; } 15% { left: 130%; } 100% { left: 130%; } }
+
+.ribbon-img-container {
+    position: relative;
+
+    /* РАСТЯГИВАЕМ НАВЫЛЕТ: Компенсируем 20px паддинга основного контейнера */
+    width: calc(100% + 40px);
+    margin: 40px -20px; /* -20px слева и справа выталкивают ленту к краям экрана */
+
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.8s ease;
+}
+
+/* Изменяем анимации сдвига, чтобы они красиво выезжали из-за экрана без белых щелей */
+.ribbon-img-container.translate-left {
+    transform: translateX(-40px);
+}
+.ribbon-img-container.translate-right {
+    transform: translateX(40px);
+}
+
+.ribbon-img-container.active {
+    opacity: 0.95;
+    transform: translateX(0);
+}
+
+.ribbon-img {
+    width: 100%;       /* Картинка займет всю растянутую ширину */
+    height: auto;
+    display: block;
+    animation: ribbonMotion 10s ease-in-out infinite alternate;
+}
+@keyframes ribbonMotion { 0% { transform: scale(1) translateY(0) rotate(0); } 100% { transform: scale(1.04) translateY(-3px) rotate(0.3deg); } }
+
+.gallery-section { margin: 30px 0; text-align: center; padding-left: 5px; }
+.gallery-subtitle { text-align: center; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; color: var(--text-muted); margin-bottom: 20px; }
+.gallery-wrapper { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 10px; }
+.gallery-wrapper::-webkit-scrollbar { display: none; }
+.gallery-item { flex: 0 0 240px; scroll-snap-align: start; border-radius: 16px; overflow: hidden; height: 330px; border: 1px solid rgba(198, 40, 40, 0.15); box-shadow: var(--shadow-soft); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+
+.form-group { margin-bottom: 18px; text-align: left; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-pink-dark); }
+.form-group input[type="text"], .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid rgba(198, 40, 40, 0.2); border-radius: 10px; background-color: #FFFDFD; color: var(--text-dark); font-size: 0.9rem; transition: all 0.3s; }
+.form-group input[type="text"]:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-pink-dark); box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.15); background-color: #ffffff; }
+.form-group textarea { resize: none; height: 80px; }
+.radio-group { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.radio-option { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.85rem; }
+.radio-option input[type="radio"] { accent-color: var(--accent-pink-dark); width: 16px; height: 16px; }
+
+.timer-section-bottom { background: #FFFDFD; border-radius: 16px; padding: 25px 10px; border: 1px solid rgba(198, 40, 40, 0.15); margin-top: 30px; }
+.timer-title-bottom { font-size: 1.3rem; color: var(--accent-pink-dark); margin-bottom: 15px; }
+.timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.timer-item { background: #FFFFFF; padding: 10px 4px; border-radius: 10px; border: 1px solid rgba(198, 40, 40, 0.15); }
+.timer-num { font-size: 1.6rem; font-weight: 600; color: var(--accent-pink-dark); }
+.timer-label { font-size: 0.55rem; text-transform: uppercase; color: var(--text-muted); }
+
+.last-slide { padding: 30px 10px 10px; }
+.last-slide-title { font-size: 2rem; }
+footer { font-size: 0.7rem; color: var(--text-muted); margin-top: 30px; letter-spacing: 2px; text-transform: uppercase; }

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Альдия - Қыз ұзату тойына шақыру</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&family=Monsieur+La+Doulaise&family=Marck+Script&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="no-scroll">
+
+    <div id="start-overlay">
+        <img class="loader-flower-real lf-1" src="peonypink.png" alt="peony">
+        <img class="loader-flower-real lf-2" src="peonypinkR.png" alt="peony">
+        <img class="loader-flower-real lf-3" src="peonypink.png" alt="peony">
+        <img class="loader-flower-real lf-4" src="peonypinkR.png" alt="peony">
+        <img class="loader-flower-real lf-5" src="peonypink.png" alt="peony">
+        <img class="loader-flower-real lf-6" src="peonypinkR.png" alt="peony">
+        <img class="loader-flower-real lf-7" src="peonypink.png" alt="peony">
+        <img class="loader-flower-real lf-8" src="peonypinkR.png" alt="peony">
+        <img class="loader-flower-real lf-9" src="peonypink.png" alt="peony">
+        <img class="loader-flower-real lf-10" src="peonypinkR.png" alt="peony">
+
+        <div class="envelope-container" onclick="startInvitation()">
+            <div class="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-paper">
+                    <div class="envelope-text"></div>
+                </div>
+                <div class="wax-seal"><img class="loader-flower-real if1" src="pinkA.png" alt="peony"></div>
+            </div>
+        </div>
+        <button class="start-btn" onclick="startInvitation()">Шақыруды ашу</button>
+    </div>
+
+    <div class="music-player">
+    <audio id="bg-music" loop playsinline>
+        <source src="DanaMahanbaevaKizgaTilek.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" id="music-ctrl"></button>
+</div>
+
+    <div class="container">
+
+        <section class="hero reveal">
+            <img class="hero-img-bg" src="a1.jpeg" alt="Альдия">
+        </section>
+
+        <div class="hero-content reveal">
+            <div class="hero-bottom-info">
+                <div class="title-wrapper">
+                    <h1 class="main-title animated-title">Aldiya</h1>
+                    <div class="sub-title-handwritten">Qyz Uzatu</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="invitation reveal block-with-flowers">
+
+
+            <div class="invitation-wrap">
+                <p class="invite-header">Құрметті ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, дос-жаран және әріптестер!</p>
+                <p class="invite-sub">Сіздерді аяулы</p>
+
+                <h2 class="bride-calligraphy-nameee">Альдия</h2>
+
+                <p class="invite-body">
+                    қызымыздың ұзату тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
+                </p>
+            </div>
+
+        </section>
+
+        <div class="ribbon-img-container translate-right">
+            <img class="ribbon-img" src="pinkscarf.png" alt="pink ribbon">
+        </div>
+
+
+        <section class="calendar-card reveal block-with-flowers">
+
+            <h2 class="bride-calligraphy-name ppt-slide-up">Той салтанаты</h2>
+            <div class="calendar-month">Тамыз 2026</div>
+
+            <div class="calendar-grid">
+                <div class="calendar-header">Дү</div>
+                <div class="calendar-header">Се</div>
+                <div class="calendar-header">Сә</div>
+                <div class="calendar-header">Бе</div>
+                <div class="calendar-header">Жұ</div>
+                <div class="calendar-header">Се</div>
+                <div class="calendar-header">Же</div>
+
+                <div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day"></div>
+                <div class="calendar-day">1</div><div class="calendar-day">2</div>
+                <div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div><div class="calendar-day">9</div>
+                <div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div><div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div><div class="calendar-day">16</div>
+                <div class="calendar-day">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div><div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div>
+                <div class="calendar-day">24</div><div class="calendar-day">25</div><div class="calendar-day">26</div><div class="calendar-day">27</div><div class="calendar-day">28</div><div class="calendar-day">29</div><div class="calendar-day">30</div>
+
+                <div class="calendar-day target">
+                    <span class="day-num">31</span>
+                    <div class="beating-heart"></div>
+                </div>
+                <div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day"></div>
+            </div>
+
+            <div class="calendar-time">Тойдың басталуы 18:00</div>
+        </section>
+
+        <div class="ribbon-img-container translate-left">
+            <img class="ribbon-img" src="pinkscarf.png" alt="pink ribbon">
+        </div>
+
+        <section class="details-card reveal block-with-flowers">
+
+
+            <h2 class="bride-calligraphy-name ppt-slide-up">Мекен-жайымыз</h2>
+            <p class="wedding-details-text">«Baq Sarai» мейрамханасы</p>
+            <p class="wedding-venue-text">Алматы қаласы, Мамыр ықшам ауданы, Шаляпин көшесі, Қыран 9</p>
+
+            <a href="https://go.2gis.com/TnhLc" target="_blank" class="btn btn-heartbeat">Картадан көру</a>
+            <div class="parents-section">
+                <p class="parents-label">Той иелері:</p>
+                <p class="parents-names ppt-slide-up">Ғабит – Гүлнар</p>
+            </div>
+        </section>
+
+        <div class="ribbon-img-container translate-right">
+            <img class="ribbon-img" src="pinkscarf.png" alt="pink ribbon">
+        </div>
+
+        <section class="gallery-section reveal block-with-flowers">
+
+
+            <h2 class="bride-calligraphy-name ppt-slide-up">Фотогалерея</h2>
+            <p class="gallery-subtitle">Естеліктер</p>
+
+            <div class="gallery-wrapper">
+                <div class="gallery-item"><img src="a2.jpg" alt="Фото 1"></div>
+                <div class="gallery-item"><img src="a3.jpeg" alt="Фото 2"></div>
+                <div class="gallery-item"><img src="a4.jpeg" alt="Фото 3"></div>
+                <div class="gallery-item"><img src="a5.jpg" alt="Фото 4"></div>
+                <div class="gallery-item"><img src="a6.jpg" alt="Фото 5"></div>
+                <div class="gallery-item"><img src="a7.jpg" alt="Фото 6"></div>
+                <div class="gallery-item"><img src="a8.jpg" alt="Фото 7"></div>
+                <div class="gallery-item"><img src="a9.jpg" alt="Фото 8"></div>
+                <div class="gallery-item"><img src="a10.jpg" alt="Фото 9"></div>
+                <div class="gallery-item"><img src="a11.jpg" alt="Фото 10"></div>
+            </div>
+        </section>
+
+        <div class="ribbon-img-container translate-left">
+            <img class="ribbon-img" src="pinkscarf.png" alt="pink ribbon">
+        </div>
+
+
+        <section class="reveal block-with-flowers">
+
+            <h5 class="details-title ppt-slide-up">Тойға келуіңізді растауыңызды сұраймыз!</h5>
+            <form class="rsvp-form" action="https://formspree.io/f/xpqvqwqj" method="POST">
+                <div class="form-group">
+                    <label for="guest-name">Аты-жөніңіз</label>
+                    <input type="text" id="guest-name" name="name" placeholder="..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guest-count">Қонақ саны</label>
+                    <select id="guest-count" name="guests">
+                        <option value="1 адам">1 адам</option>
+                        <option value="2 адам">2 адам</option>
+                        <option value="3 адам">3 адам</option>
+                        <option value="4+ адам">4+ адам</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Тойға қатысуыңыз:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="attendance" value="Келемін" checked required>
+                            <span>Иә, әрине келемін</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="attendance" value="Келе алмаймын">
+                            <span>Өкінішке орай, келе алмаймын</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="guest-wish">Тілек / Ескерту</label>
+                    <textarea id="guest-wish" name="message" placeholder="Қосымша хабарлама..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-shimmer" style="width: 100%; margin-top: 10px;">Жіберу</button>
+            </form>
+        </section>
+
+        <section class="last-slide reveal block-with-flowers">
+
+
+            <h2 class="timer-title-bottom serif-title ppt-slide-up">Тойымыздың қадірлі қонағы болыңыздар!</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; letter-spacing: 1px;"></p>
+
+            <div class="timer-section-bottom">
+                <h3 class="timer-title-bottom">Тойдың басталуына қалды:</h3>
+                <div class="timer-grid">
+                    <div class="timer-item">
+                        <div class="timer-num" id="days">00</div>
+                        <div class="timer-label">күн</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-num" id="hours">00</div>
+                        <div class="timer-label">сағат</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-num" id="minutes">00</div>
+                        <div class="timer-label">минут</div>
+                    </div>
+                    <div class="timer-item">
+                        <div class="timer-num" id="seconds">00</div>
+                        <div class="timer-label">секунд</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer></footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
