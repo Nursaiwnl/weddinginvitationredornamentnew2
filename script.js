@@ -61,7 +61,7 @@ document.querySelectorAll('.reveal, .ribbon-img-container').forEach(el => {
 });
 
 //-------3.5 google zapros form
-const SCRIPT_URL = 'ВСТАВЬ_СЮДА_СВОЮ_ССЫЛКУ_ИЗ_GOOGLE_APPS_SCRIPT';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwOReHsGhcrpRgEHI7nmStaNrDw5s-C8am8CwAF-94n5rrNqwvAhoDgm9GmJl-AHMpztA/exec';
 
 const rsvpForm = document.getElementById('rsvpForm');
 
