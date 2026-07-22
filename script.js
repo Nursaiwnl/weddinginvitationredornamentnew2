@@ -60,6 +60,55 @@ document.querySelectorAll('.reveal, .ribbon-img-container').forEach(el => {
     observer.observe(el);
 });
 
+//-------3.5 google zapros form
+const SCRIPT_URL = 'ВСТАВЬ_СЮДА_СВОЮ_ССЫЛКУ_ИЗ_GOOGLE_APPS_SCRIPT';
+
+const rsvpForm = document.getElementById('rsvpForm');
+
+if (rsvpForm) {
+  rsvpForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Меняем текст на кнопке, чтобы гость видел процесс
+    const submitBtn = rsvpForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = 'Жіберілуде...';
+    submitBtn.disabled = true;
+
+    // Собираем данные из полей
+    const formData = {
+      name: document.getElementById('guest-name').value,
+      guests: document.getElementById('guest-count').value,
+      attendance: rsvpForm.querySelector('input[name="attendance"]:checked')?.value || '',
+      message: document.getElementById('guest-wish').value
+    };
+
+    // Отправляем в Google Таблицу
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(() => {
+      alert('Рақмет! Жауабыңыз қабылданды.');
+      rsvpForm.reset();
+    })
+    .catch((error) => {
+      console.error('Қате:', error);
+      alert('Қате орын алды. Қайтадан байқап көрсеңіз.');
+    })
+    .finally(() => {
+      // Возвращаем кнопку в исходное состояние
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+    });
+  });
+}
+
+
 // --- 4. ТАЙМЕР ОБРАТНОГО ОТСЧЕТА ДО 31 АВГУСТА 2026 ---
 const targetDate = new Date("2026-08-31T18:00:00").getTime();
 
